@@ -13,10 +13,11 @@ print("'key' in ['key': 'value'] == ", 'key' in {'key': 'value'})
 print("7 in {7, 8, 9} == ", 7 in {7, 8, 9})
 print('-------------------------------------')
 
-list = [0, 1, 2, 3, 4]
-print("list == ", list)
+print('list')
+lst = [0, 1, 2, 3, 4]
+print("lst == ", lst)
 
-for item in list:
+for item in lst:
     print(item)
 
 print("-")
@@ -76,4 +77,44 @@ print('-------------------------------------')
 print('list comprehension')
 print('[val ** 2 for val in values] - ', [val ** 2 for val in values])
 
+print('{val: val ** 2 for val in values} - ', {val: val ** 2 for val in values})
 
+print('generator')
+gen = (val ** 2 for val in values)
+print("(val ** 2 for val in values)", gen)
+print('next(generator) == ', next(gen))
+print('next(generator) == ', next(gen))
+print('next(generator) == ', next(gen))
+print('list(generator) == ', list(gen))
+
+
+print('-------------------------------------')
+
+lines = ['spam', 'eggs', 'another line']
+print('lines - ', lines)
+
+for line in lines[:]:
+    if len(line) > 7:
+        lines.insert(0, line)
+        print('lines - ', lines)
+
+print('-')
+line = 'python'
+print("line = 'pyton' - ")
+print("line[::2] - (each 2 element)", line[::2])
+
+print('-')
+print('values == ', values)
+print("values[::3] == ", values[::3])
+
+print('-')
+print('values == ', values)
+print('values[::-1] == ', values[::-1])
+print('line == ', line)
+print('line[::-1] == ', line[::-1])
+
+print('------------------------')
+print('list(range(10)) - ', list(range(10)))
+print('list(range(7, 13)) - ', list(range(7, 13)))
+print('list(range(10, 40, 3)) - ', list(range(10, 40, 3)))
+print('-')

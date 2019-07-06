@@ -44,8 +44,10 @@ def user_page():
     user_name = request.form.get('fname', 'not started')
     if not user_name:
         user_name = 'not stated'
+    # error to debug
+    1 / 0
     return f"<h3>USER NAME: {user_name}</h3>"
 
 
 if __name__ == '__main__':
-    app.run(host='localhost', port=5000)
+    app.run(host='localhost', port=5000, debug=True)
